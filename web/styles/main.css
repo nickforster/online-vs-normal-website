@@ -3,7 +3,8 @@ main {
     top: 6rem;
     bottom: 20rem;
     padding: 0.5rem 8%;
-    font-family: Noto Sans, sans-serif;
+    font-family: Source Sans Pro, sans-serif;
+    font-size: 20px;
 }
 
 

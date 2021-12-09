@@ -109,7 +109,7 @@ header('Content-Type: text/html; charset=utf-8');
       ?>
       <div id="Mail">
         <?php echo "<h1>$titel</h1>"; ?>
-        <p style="font-size: 10px; font-weight: bold;">*Pflichtfelder</p>
+        <p style="font-size: 12px; font-weight: bold;">*Pflichtfelder</p>
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" accept-charset="utf-8">
           <!-- Erstellt die Einzelnen Eingaben -->
           <label>Name * <br>
