@@ -1,0 +1,207 @@
+body {
+    padding-top: 150px;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #F3F3F3;
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    padding-left: 1rem;
+    box-shadow: 0px 3px 10px 5px rgba(0, 0, 0, .1);
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+.hamburger-button{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25px;
+    width: 30px;
+    top: 3rem;
+    right: 1rem;
+}
+.hamburger-button .line{
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 5px;
+}
+.title-text{
+    position: absolute;
+    color: black;
+    width: 100%;
+    display: none;
+    align-items: flex-start;
+    padding-top: 3rem;
+    justify-content: center;
+    font-size: 30px;
+}
+.navbar{
+    margin-right: 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.link {
+    background: none;
+    border: none;
+    text-decoration: none;
+    color: #777;
+    cursor: pointer;
+    padding: .3rem;
+}
+
+.link:hover{
+    color: black;
+}
+
+.dropdown {
+    position: relative;
+    top: 0;
+}
+
+.dropdown-menu {
+    position: absolute;
+    left: 0;
+    width: max-content;
+    /* background-color: white; */
+    background-color: #D8D8D8;
+    font-size: 19px;
+    padding: .75rem;
+    border-radius: .25rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .25);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown:hover > .dropdown-menu{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.dropdown-button{
+    border: none;
+    text-decoration: none;
+    background-color: #F3F3F3;
+    color: #777;
+    font-size: 25px;
+}
+
+.dropdown-button a{
+    text-decoration: none;
+    color: #777;
+}
+
+
+
+.dropdown-button:hover a{
+    color: black;
+}
+
+
+
+/* CSS-code für responsive Layout */
+@media (max-width: 750px){
+    header{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+    }
+    .logo-letzi{
+        padding: 1.5rem;
+        padding-bottom: 0.5rem;
+    }
+    .hamburger-button{
+        display: flex;
+        margin-right: 0.5rem;
+        transform: rotate(0deg);
+        transition: transform 300ms ease-in-out;
+    }
+    .hamburger-button.active{
+        transform: rotate(90deg);
+        transition: transform 300ms ease-in-out;
+    }
+    .title-text{
+        display: flex;
+    }
+    .navbar{
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    .navbar.active * {
+        animation: dropdown-responsive 200ms linear;
+    }
+    .navbar.active a, .navbar.active button {
+        animation: dropdown-responsive-text;
+        animation-delay: 100ms;
+    }
+
+    .navbar .dropdown .dropdown-button{
+        display: none;
+    }
+
+    .navbar.active .dropdown .dropdown-button{
+        display: block;
+    }
+
+    @keyframes dropdown-responsive-text {
+        from {color: transparent;}
+        to {color: auto;}
+    }
+
+    @keyframes dropdown-responsive {
+        from {height: 0; padding: 0;}
+        to {height: auto; padding: auto;}
+    }
+
+    .navbar.active{
+        display: flex;
+    }
+    .dropdown{
+        padding: 0.5rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .dropdown-menu a{
+        display: flex;
+        justify-content: center;
+    }
+    .dropdown-menu{
+        width: 100%;
+        background-color: #D8D8D8;
+        position: relative;
+        top: 1rem;
+        margin-bottom: 0.5rem;
+        font-size: 25px;
+        transform: translateY(0);
+        transition: none;
+        border-radius: 0;
+        box-shadow: none;
+        display: none;
+    }
+    .dropdown-menu.active{
+        display: flex;
+    }
+}
+
+@media (max-width: 360px) {
+    .title-text{
+        display: none;
+    }
+}
