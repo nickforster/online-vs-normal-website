@@ -100,6 +100,32 @@ h2 span {
 .to-top:hover:before {
     transform: rotate(360deg);
 }
+.statistik-text1{
+    grid-area: text1;
+}
+.statistik-text2{
+    grid-area: text2;
+}
+.statistik-text3{
+    grid-area: text3;
+}
+.statistik1{
+    grid-area: bild1;
+}
+.statistik2{
+    grid-area: bild2;
+}
+.statistik3{
+    grid-area: bild3;
+}
+
+.statistiken{
+    display: grid;
+    grid-template-areas: 'text1 bild1' 'bild2 text2' 'text3 bild3';
+    gap: 2rem;
+    padding: 0px;
+}
+
 
 
 /* CSS code für Seite Ueber Uns */
