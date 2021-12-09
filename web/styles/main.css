@@ -7,6 +7,7 @@ main {
 }
 
 
+
 /* CSS code für index Seite */
 html {
     scroll-behavior: smooth;
@@ -133,13 +134,13 @@ h2 span {
 }
 
 .uberuns-bloecke {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
 }
 
 @media (max-width: 750px) {
-    .uberuns-bloecke{
-        grid-template-columns: 1fr;
+    .uberuns-bloecke {
+        flex-direction: column;
     }
 }
 

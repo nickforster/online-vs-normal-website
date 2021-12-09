@@ -25,6 +25,7 @@ header('Content-Type: text/html; charset=utf-8');
   <link rel="stylesheet" href="styles/header.css">
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/kontakt.css">
 
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
@@ -117,8 +118,7 @@ header('Content-Type: text/html; charset=utf-8');
         $zahlung = "";
       }
       //Änderung der Hintergrundfarbe nach Auswahl des Users
-      //$msg = "";
-      //mail('nick.camenisch@student.ksh.ch', 'Bestellung', $msg, "From: $email", "-f$email");
+
       ?>
       <div id="Mail">
         <?php echo "<h1>$titel</h1>"; ?>
@@ -126,7 +126,7 @@ header('Content-Type: text/html; charset=utf-8');
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" accept-charset="utf-8">
           <!-- Erstellt die Einzelnen Eingaben -->
           <label>Name
-            <input type="text" id="name" name="name" value="<?php echo $name ?>" placeholder="" s><span class="error">* <?php echo $nameErr; ?></span>
+            <input  type="text" id="name" class="name" name="name" value="<?php echo $name ?>" placeholder="" s><span class="error">* <?php echo $nameErr; ?></span>
           </label><br><br><br>
           <label>Vorname
             <input type="text" id="vorname" name="vorname" value="<?php echo $vorname ?>" placeholder=""><span class="error">* <?php echo $vornameErr; ?></span>
@@ -191,6 +191,8 @@ header('Content-Type: text/html; charset=utf-8');
         echo "<style>.formular { display:none; }</style>"; //Formular ausblenden
         echo "<h2>Bestellung</h2>";
         echo $ausgabe;
+        //$msg = "";
+        //mail('nick.camenisch@student.ksh.ch', 'Bestellung', $msg, "From: $email", "-f$email");
       }
       ?>
     </div>
