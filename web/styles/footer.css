@@ -4,7 +4,7 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: #CCC;
+    background-color: #d4f2f6;
     padding: 2rem;
     top: 6rem;
 }
@@ -50,4 +50,7 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: sans-serif;
 }
