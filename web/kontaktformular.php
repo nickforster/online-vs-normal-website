@@ -109,25 +109,25 @@ header('Content-Type: text/html; charset=utf-8');
       ?>
       <div id="Mail">
         <?php echo "<h1>$titel</h1>"; ?>
-        <p>*Pflichtfelder</p>
+        <p style="font-size: 10px; font-weight: bold;">*Pflichtfelder</p>
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" accept-charset="utf-8">
           <!-- Erstellt die Einzelnen Eingaben -->
-          <label>Name
-            <input  type="text" id="name"  name="name" value="<?php echo $name ?>" placeholder="" s><span class="error">* <?php echo $nameErr; ?></span>
+          <label>Name * <br>
+            <input  type="text" id="name"  name="name" value="<?php echo $name ?>" placeholder="" s><span class="error"><?php echo $nameErr; ?></span>
           </label><br><br><br>
-          <label>Vorname
-            <input type="text" id="vorname" name="vorname" value="<?php echo $vorname ?>" placeholder=""><span class="error">* <?php echo $vornameErr; ?></span>
+          <label>Vorname * <br>
+            <input type="text" id="vorname" name="vorname" value="<?php echo $vorname ?>" placeholder=""><span class="error"><?php echo $vornameErr; ?></span>
           </label><br><br><br>
-          <label>Email
-            <input type="email" id="email" name="email" value="<?php echo $email ?>" placeholder=""><span class="error">* <?php echo $emailErr; ?></span>
+          <label>Email * <br>
+            <input type="email" id="email" name="email" value="<?php echo $email ?>" placeholder=""><span class="error"><?php echo $emailErr; ?></span>
           </label><br><br><br>
-          <label>Nachricht*
-            <textarea name="nachricht" id="nachricht" name="nachricht" cols="50" rows="6" value="<?php echo $nachricht ?>"></textarea><span class="error">*<?php echo $nachrichtErr; ?></span>
+          <label>Nachricht *
+            <textarea name="nachricht" id="nachricht" name="nachricht" cols="50" rows="6" value="<?php echo $nachricht ?>"></textarea><span class="error"><?php echo $nachrichtErr; ?></span>
           </label>
           <br><br>
           <!--Absenden-->
           <input id="submit" type="submit" name="senden" value="senden">
-          <div class="loader"></div>
+          <br><br>
         </form>
       </div>
     </div>

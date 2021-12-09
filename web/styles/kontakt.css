@@ -1,13 +1,25 @@
-#name, #vorname, #email, #nachrichten{
-
+#name, #vorname, #email, #nachricht{
+    width: 100%; min-width: 100%; max-width: 100%;
+    box-sizing: border-box;
+    padding: 4px;
+    outline: none;
+    resize: none;
 }
 
 #submit{
-    font-size: 1.3em; padding: 5px 12px;
-    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
     font-weight: 300;
-    color: teal;
-    border: 1px solid silver;
-    background-image: linear-gradient(to top, gainsboro 0%, white 90%);
-    border-radius: 20px;
+    color: black;
+    border: none;
+    background-color: #CCC;
+    border-radius: 4px;
+}
+
+#Mail{
+    padding-left: 30%;
+    padding-right: 30%;
 }
