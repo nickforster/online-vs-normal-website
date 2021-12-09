@@ -125,6 +125,15 @@ h2 span {
     gap: 2rem;
     padding: 0px;
 }
+@media (max-width: 1050px) {
+    .statistiken{
+        grid-template-areas: 'bild1' 'text1' 'bild2' 'text2' 'bild3' 'text3';
+    }
+    .statistiken img{
+        width: 100%;
+        height: auto;
+    }
+}
 
 
 

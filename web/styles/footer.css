@@ -42,7 +42,6 @@ footer{
     }
     .footer-full-content{
         flex-direction: column;
-        width: fit-content;
     }
 }
 
