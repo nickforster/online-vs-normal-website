@@ -178,13 +178,25 @@ h2 span {
 }
 
 .uberuns-bloecke {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'nimai nickf nickc';
 }
+.nimai{
+    grid-area: nimai;
+}
+.nickf{
+    grid-area: nickf;
+}
+.nickc{
+    grid-area: nickc;
+}
+
 
 @media (max-width: 750px) {
     .uberuns-bloecke {
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'nimai' 'nickf' 'nickc';
     }
 }
 
