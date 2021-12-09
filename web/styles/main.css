@@ -1,92 +1,100 @@
-main{
+main {
     position: relative;
     top: 6rem;
     bottom: 20rem;
-    padding: 0.5rem;
+    padding: 0.5rem 8%;
+    font-family: Noto Sans, sans-serif;
 }
+
 
 
 /* CSS code für index Seite */
-html{
+html {
     scroll-behavior: smooth;
 }
-h1{ 
-    position:relative;
+
+h1 {
+    position: relative;
 }
-h1 span{ 
+
+h1 span {
     /* position:absolute; top:-6.8rem; */
-    position:absolute; top: calc(0.18 * 100vh * -1);
+    position: absolute;
+    top: calc(0.18 * 100vh * -1);
 }
-h2{ 
-    position:relative;
+
+h2 {
+    position: relative;
 }
-h2 span{ 
+
+h2 span {
     /* position:absolute; top:-6.8rem; */
-    position:absolute; top: calc(0.18 * 100vh * -1);
-}
-@media (max-width: 750px){
-    h1 span{ 
-        position:absolute; top: calc(0.16 * 100vh * -1);
-    }
-    h2 span{ 
-        position:absolute; top: calc(0.16 * 100vh * -1);
-    }
+    position: absolute;
+    top: calc(0.18 * 100vh * -1);
 }
 
+@media (max-width: 750px) {
+    h1 span {
+        position: absolute;
+        top: calc(0.16 * 100vh * -1);
+    }
+
+    h2 span {
+        position: absolute;
+        top: calc(0.16 * 100vh * -1);
+    }
+}
 
 
-.button-top{
+.button-top {
     width: 100%;
     text-align: center;
     padding-top: 1rem;
     position: fixed;
 }
-.to-top{
+
+.to-top {
     background-color: white;
     text-align: center;
     font-family: Calibri, arial, sans-serif;
-	color:black;
-	padding-top:1.8em;
+    color: black;
+    padding-top: 1.8em;
     display: none;
-	position:relative;
-	border-color:black;
-	text-decoration:none;
-	transition:all .3s ease-out;
+    position: relative;
+    border-color: black;
+    text-decoration: none;
+    transition: all .3s ease-out;
 }
-.to-top.active{
+
+.to-top.active {
     display: inline-block;
 }
 
 
-.to-top:before{
+.to-top:before {
     background-color: white;
-	content:'▲';
-	font-size:.9em;
-	position:absolute;
-	top:0;
-	left:50%;
-	margin-left:-.7em;
-	border:solid .13em black;
-	border-radius:10em;
-	width:1.4em;
-	height:1.4em;
-	line-height:1.3em;
-	border-color:inherit;
-	transition:transform .5s ease-in;
-}
-.to-top:hover:before{
-	transform: rotate(360deg);
+    content: '▲';
+    font-size: .9em;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -.7em;
+    border: solid .13em black;
+    border-radius: 10em;
+    width: 1.4em;
+    height: 1.4em;
+    line-height: 1.3em;
+    border-color: inherit;
+    transition: transform .5s ease-in;
 }
 
-
-
-
-
-
+.to-top:hover:before {
+    transform: rotate(360deg);
+}
 
 
 /* CSS code für Seite Ueber Uns */
-.uberuns-content{
+.uberuns-content {
     position: relative;
     padding: 1rem;
     margin: 1rem;
@@ -95,81 +103,60 @@ h2 span{
     border-radius: 20px;
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, .2);
 }
-.uberuns-img{
+
+.uberuns-img {
     position: relative;
 }
-.uberuns-name{
+
+.uberuns-name {
     position: relative;
     font-size: 25px;
 }
-.uberuns-beschreibung{
+
+.uberuns-beschreibung {
     position: relative;
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
 }
-.uberuns-clash{
+
+.uberuns-clash {
     position: relative;
 }
-.uberuns-insta{
+
+.uberuns-insta {
     position: relative;
 }
-.uberuns-logos, .uberuns-title{
+
+.uberuns-logos, .uberuns-title {
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
 }
-.uberuns-bloecke{
+
+.uberuns-bloecke {
     display: flex;
     flex-direction: row;
 }
-/* .nimai{
-    grid-column: 1 / span 2;
-}
-.nickf{
-    grid-column: 1 / span 2;
-}
-.nickc{
-    grid-row: 1 / span 2;
-    grid-column: 3 / 4;
-}
-.uberuns-bloecke{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-} */
+
 @media (max-width: 750px) {
-    .nimai{
-        grid-column: span 3;
-    }
-    .nickf{
-        grid-column: span 3;
-    }
-    .nickc{
-        grid-column: span 3;
+    .uberuns-bloecke {
+        flex-direction: column;
     }
 }
-
-
-
-
-
 
 
 /* CSS code für Seite Quellen */
 .quellen {
     padding-left: 1rem;
 }
-.quellen.ul{
+
+.quellen.ul {
     list-style: square inside;
 }
 
 
-
-
-
-
-
-@media (max-width: 750px){
-    main{
+@media (max-width: 750px) {
+    main {
         top: 7rem;
     }
 }
@@ -179,7 +166,7 @@ h2 span{
     animation-iteration-count: infinite;
 }
 
-.html.konami-code{
+.html.konami-code {
     animation: spin-page 3s linear;
     animation-iteration-count: infinite;
 }
@@ -190,45 +177,49 @@ h2 span{
 }
 
 @keyframes spin-page {
-    from {transform: rotate(0deg)}
-    to {transform: rotate(360deg)}
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg)
+    }
 }
 
-@keyframes animation-background{
-    100%,0%{
-        background-color: rgb(255,0,0);
+@keyframes animation-background {
+    100%, 0% {
+        background-color: rgb(255, 0, 0);
     }
-    8%{
-        background-color: rgb(255,127,0);
+    8% {
+        background-color: rgb(255, 127, 0);
     }
-    16%{
-        background-color: rgb(255,255,0);
+    16% {
+        background-color: rgb(255, 255, 0);
     }
-    25%{
-        background-color: rgb(127,255,0);
+    25% {
+        background-color: rgb(127, 255, 0);
     }
-    33%{
-        background-color: rgb(0,255,0);
+    33% {
+        background-color: rgb(0, 255, 0);
     }
-    41%{
-        background-color: rgb(0,255,127);
+    41% {
+        background-color: rgb(0, 255, 127);
     }
-    50%{
-        background-color: rgb(0,255,255);
+    50% {
+        background-color: rgb(0, 255, 255);
     }
-    58%{
-        background-color: rgb(0,127,255);
+    58% {
+        background-color: rgb(0, 127, 255);
     }
-    66%{
-        background-color: rgb(0,0,255);
+    66% {
+        background-color: rgb(0, 0, 255);
     }
-    75%{
-        background-color: rgb(127,0,255);
+    75% {
+        background-color: rgb(127, 0, 255);
     }
-    83%{
-        background-color: rgb(255,0,255);
+    83% {
+        background-color: rgb(255, 0, 255);
     }
-    91%{
-        background-color: rgb(255,0,127);
+    91% {
+        background-color: rgb(255, 0, 127);
     }
 }
