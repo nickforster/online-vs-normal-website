@@ -9,22 +9,9 @@ footer{
     top: 6rem;
 }
 
-
-
-
-.footer-heading{
-    text-decoration: none;
-    color: black;
-    font-size: 22px;
-}
-
-.footer-heading a{
-    cursor: pointer;
-}
-
 .footer-data a{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     text-decoration: none;
     cursor: pointer;
     color: black;
@@ -36,16 +23,10 @@ footer{
     width: max-content;
     border-bottom: black solid 1.5px;
 }
-@keyframes transform-border-width {
-    from {border-width: 0px;}
-    to {border-width: auto;}
+
+.footer-data{
+    width: 100%;
 }
-
-
-
-
-
-
 
 .footer-full-content{
     width: 100%;
@@ -63,4 +44,11 @@ footer{
         flex-direction: column;
         width: fit-content;
     }
+}
+
+.footer-infos{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
