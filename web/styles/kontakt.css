@@ -1,3 +1,13 @@
-#name{
-    background-color: red;
+#name, #vorname, #email, #nachrichten{
+
+}
+
+#submit{
+    font-size: 1.3em; padding: 5px 12px;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    color: teal;
+    border: 1px solid silver;
+    background-image: linear-gradient(to top, gainsboro 0%, white 90%);
+    border-radius: 20px;
 }
