@@ -63,7 +63,7 @@ header('Content-Type: text/html; charset=utf-8');
         } else {
           $name = test_input($_POST["name"]);
           //Auf RegEx kontrolieren
-          if (!preg_match("/^[a-zA-Z-' ]{2,}$/", $name)) {
+          if (!preg_match("/^[A-ZÀ-Ÿ][A-zÀ-ÿ']{2,}$/", $name)) {
             $nameErr = "Es sind nur Buchstaben erlaubt.";
           }
         }
@@ -73,7 +73,7 @@ header('Content-Type: text/html; charset=utf-8');
         } else {
           $vorname = test_input($_POST["vorname"]);
           //Auf RegEx kontrolieren
-          if (!preg_match("/^[a-zA-Z-' ]{2,}$/", $vorname)) {
+          if (!preg_match("/^[A-ZÀ-Ÿ][A-zÀ-ÿ']{2,}$/", $vorname)) {
             $vornameErr = "Nur Buchstaben sind erlaubt.";
           }
         }
