@@ -11,7 +11,7 @@ p, li, h1, h2, a, ol, ul, b, label, .submit{
     font-weight: 300;
 }
 
-h1, h2, .dropdown-button a{
+h1, h2, .dropdown-button a, .footer-infos p a b{
     font-family: Source Sans Pro, sans-serif;
     font-weight: 600;
 }
