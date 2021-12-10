@@ -192,6 +192,20 @@ h2 span {
     border-bottom: none;
 }
 
+/* Code für gridlayout mit bildern */
+.inhalt-bilder{
+    height: 300px;
+    width: auto;
+    float: right;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+.inhalt-texte{
+    text-align: justify;
+}
+
+
+
 
 
 /* CSS code für Seite Ueber Uns */
