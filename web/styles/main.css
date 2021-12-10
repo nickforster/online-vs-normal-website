@@ -144,10 +144,23 @@ h2 span {
 .statistik3{
     grid-area: bild3;
 }
+.statistik-linie1{
+    grid-area: linie1;
+}
+.statistik-linie2{
+    grid-area: linie2;
+}
+.statistik-linie1, .statistik-linie2{
+    width: 100%;
+    height: 0.1px;
+    border: none;
+    background-color: grey;
+    margin: 0;
+}
 
 .statistiken{
     display: grid;
-    grid-template-areas: 'text1 bild1' 'bild2 text2' 'text3 bild3';
+    grid-template-areas: 'text1 bild1' 'linie1 linie1' 'bild2 text2' 'linie2 linie2' 'text3 bild3';
     gap: 2rem;
     padding: 0px;
 }
@@ -159,6 +172,14 @@ h2 span {
         width: 100%;
         height: auto;
     }
+}
+
+.grid-item{
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+.grid-item:last-child{
+    border-bottom: none;
 }
 
 
