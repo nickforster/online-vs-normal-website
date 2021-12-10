@@ -30,6 +30,16 @@ h1, h2, .dropdown-button a, .footer-infos p a b{
     font-weight: 600;
 }
 
+::selection {
+    background-color:  #d4f2f6;
+    color: black;
+}
+/* und hiermit der Firefox >=1 */
+::-moz-selection {
+    background-color: #d4f2f6;
+    color: black;
+}
+
 
 
 
