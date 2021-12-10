@@ -6,7 +6,7 @@ main {
     font-size: 20px;
 }
 
-p, li, h1, h2, a, ol, ul, b{
+p, li, h1, h2, a, ol, ul, b, label, .submit{
     font-family: Source Sans Pro, sans-serif;
     font-weight: 300;
 }

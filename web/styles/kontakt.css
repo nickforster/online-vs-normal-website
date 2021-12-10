@@ -18,6 +18,13 @@
     background-color: #fde776;
     border-radius: 4px;
 }
+.error{
+   color: gray;
+}
+
+#submit:hover{
+    background-color: #ecd46a;
+}
 
 #Mail{
     padding-left: 30%;

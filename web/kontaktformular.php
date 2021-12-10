@@ -49,6 +49,8 @@ header('Content-Type: text/html; charset=utf-8');
   <main>
     <div class="formular">
       <?php
+      //Versendetnachrict ausblenden
+      echo "<style>.versendet { display:none; }</style>";
       //Initialisierung der Variabeln
       $nameErr = $vornameErr = $emailErr = $nachrichtErr = "";
       $name = $vorname = $email = $nachricht = $ausgabe = "";
@@ -107,6 +109,7 @@ header('Content-Type: text/html; charset=utf-8');
         $name = "";
         $vorname = "";
         $nachricht = "";
+        $email = "";
       }
       //Änderung der Hintergrundfarbe nach Auswahl des Users
 
@@ -116,33 +119,33 @@ header('Content-Type: text/html; charset=utf-8');
         <p style="font-size: 12px; font-weight: bold;">*Pflichtfelder</p>
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" accept-charset="utf-8">
           <!-- Erstellt die Einzelnen Eingaben -->
-          <label>Name * <br>
-            <input  type="text" id="name"  name="name" value="<?php echo $name ?>" placeholder="" s><span class="error"><?php echo $nameErr; ?></span>
+          <label>Name * <span class="error"><?php echo $nameErr; ?></span><br>
+            <input  type="text" id="name"  name="name" value="<?php echo $name ?>" placeholder="" s>
           </label><br><br><br>
-          <label>Vorname * <br>
-            <input type="text" id="vorname" name="vorname" value="<?php echo $vorname ?>" placeholder=""><span class="error"><?php echo $vornameErr; ?></span>
+          <label>Vorname * <span class="error"><?php echo $vornameErr; ?></span><br>
+            <input type="text" id="vorname" name="vorname" value="<?php echo $vorname ?>" placeholder="">
           </label><br><br><br>
-          <label>Email * <br>
-            <input type="email" id="email" name="email" value="<?php echo $email ?>" placeholder=""><span class="error"><?php echo $emailErr; ?></span>
+          <label>Email * <span class="error"><?php echo $emailErr; ?></span><br>
+            <input type="email" id="email" name="email" value="<?php echo $email ?>" placeholder="">
           </label><br><br><br>
-          <label>Nachricht *
-            <textarea name="nachricht" id="nachricht" name="nachricht" cols="50" rows="6" value="<?php echo $nachricht ?>"></textarea><span class="error"><?php echo $nachrichtErr; ?></span>
+          <label>Nachricht * <span class="error"><?php echo $nachrichtErr; ?></span>
+            <textarea name="nachricht" id="nachricht" name="nachricht" cols="50" rows="6" value="<?php echo $nachricht ?>"></textarea>
           </label>
           <br><br>
           <!--Absenden-->
-          <input id="submit" type="submit" name="senden" value="senden">
-          <br><br>
+          <div style="display: flex; flex-direction: row; align-items: center;">
+            <input id="submit" type="submit" name="senden" value="senden">
+            <div class="versendet" style="font-size: 20px; margin-left: 10px;"><p>Die Nachricht wurde versendet</p></div>
+            <br><br>
+           </div>
         </form>
       </div>
     </div>
     <div class="bestellung">
       <?php
       if ($nameErr === '' && $vornameErr === '' && $emailErr === '' && isset($_POST['senden'])) {
-        echo "<style>.formular { display:none; }</style>"; //Formular ausblenden
-        echo "<h2>Bestellung</h2>";
-        echo $ausgabe;
-        //$msg = "";
-        //mail('nick.camenisch@student.ksh.ch', 'Bestellung', $msg, "From: $email", "-f$email");
+        echo "<style>.versendet { display:block; }</style>"; //Versendet anzeigen
+        mail('nick.camenisch@student.ksh.ch', 'Kontakt', $nachricht, "From: $email", "-f$email");
       }
       ?>
     </div>
