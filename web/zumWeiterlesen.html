@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" class="html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zum Weiterlesen</title>
+
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/footer.css">
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet">
+
+
+    <script src="script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+<header>
+    <div id="nav-placeholder"></div>
+    <script>
+        $.get("nav.html", function(data){
+            $("#nav-placeholder").replaceWith(data);
+        });
+    </script>
+</header>
+<main>
+    <div class="quellen">
+        <h1>Zum Weiterlesen</h1>
+    </div>
+    <div class="quellen-text quellen">
+        <h2>Über Onlinehandel</h2>
+        <div class="quellen-content">
+            <ul>
+                <li>
+                    <a href="https://de.wikipedia.org/wiki/Elektronischer_Handel" target="_blank">Onlinehandel Wiki</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="quellen-statistik quellen">
+        <h2>Vergleiche</h2>
+        <div class="quellen-content">
+            <ul>
+                <li>
+                    <a href="https://blog.hubspot.de/marketing/onlinehandel-vs-stationaer" target="_blank">Onlinehandel vs Stationärer Handel</a>
+                </li>
+                <li>
+                    <a href="https://www.robertwalters.ch/karriere-tipps/sales-digital-marketing/ecommerce-vs-stationaerer-handel.html" target="_blank">Löst der E-Commerce den stationären Handel ab?</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+<footer>
+    <div id="footer-placeholder"></div>
+    <script>
+        $.get("footer.html", function(data){
+            $("#footer-placeholder").replaceWith(data);
+        });
+    </script>
+</footer>
+</body>
+</html>
