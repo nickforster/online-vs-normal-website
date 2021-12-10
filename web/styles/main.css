@@ -161,7 +161,7 @@ h2 span {
 .statistiken{
     display: grid;
     grid-template-areas: 'text1 bild1' 'linie1 linie1' 'bild2 text2' 'linie2 linie2' 'text3 bild3';
-    gap: 2rem;
+    grid-gap: 2rem;
     padding: 0px;
 }
 @media (max-width: 1050px) {
