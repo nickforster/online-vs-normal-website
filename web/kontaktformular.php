@@ -29,6 +29,10 @@ header('Content-Type: text/html; charset=utf-8');
 
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet">
+
+
   <script src="script.js" defer></script>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>

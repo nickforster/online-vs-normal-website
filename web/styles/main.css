@@ -8,6 +8,26 @@ main {
 
 p, li, h1, h2, a, ol, ul, b{
     font-family: Source Sans Pro, sans-serif;
+    font-weight: 300;
+}
+
+h1, h2, .dropdown-button a{
+    font-family: Source Sans Pro, sans-serif;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Source Sans Pro, sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Source Sans Pro, sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap');
+    font-style: normal;
+    font-weight: 600;
 }
 
 
