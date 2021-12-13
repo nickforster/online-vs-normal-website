@@ -63,7 +63,7 @@ header('Content-Type: text/html; charset=utf-8');
         } else {
           $name = test_input($_POST["name"]);
           //Auf RegEx kontrolieren
-          if (!preg_match("/^[A-ZÀ-Ÿ][A-zÀ-ÿ']{2,}$/", $name)) {
+          if (!preg_match("/^[a-zA-Z-' ]{2,}$/", $name)) {
             $nameErr = "Es sind nur Buchstaben erlaubt.";
           }
         }
@@ -73,7 +73,7 @@ header('Content-Type: text/html; charset=utf-8');
         } else {
           $vorname = test_input($_POST["vorname"]);
           //Auf RegEx kontrolieren
-          if (!preg_match("/^[A-ZÀ-Ÿ][A-zÀ-ÿ']{2,}$/", $vorname)) {
+          if (!preg_match("/^[a-zA-Z-' ]{2,}$/", $vorname)) {
             $vornameErr = "Nur Buchstaben sind erlaubt.";
           }
         }
@@ -105,11 +105,7 @@ header('Content-Type: text/html; charset=utf-8');
       }
        //Bestellung ausgeben
        if ($nameErr === '' && $vornameErr === '' && $emailErr === '' && $nachrichtErr === '' && isset($_POST['senden'])) {
-        $ausgabe = "Name: $name <br> Vorname: $vorname <br> Email: $email <br> Nachricht: $nachricht";
-        $name = "";
-        $vorname = "";
-        $nachricht = "";
-        $email = "";
+        $ausgabe = "Name: $name \n Vorname: $vorname \n Email: $email \n Nachricht: $nachricht";
       }
       //Änderung der Hintergrundfarbe nach Auswahl des Users
 
@@ -129,7 +125,7 @@ header('Content-Type: text/html; charset=utf-8');
             <input type="email" id="email" name="email" value="<?php echo $email ?>" placeholder="">
           </label><br><br><br>
           <label>Nachricht * <span class="error"><?php echo $nachrichtErr; ?></span>
-            <textarea name="nachricht" id="nachricht" name="nachricht" cols="50" rows="6" value="<?php echo $nachricht ?>"></textarea>
+            <textarea name="nachricht" id="nachricht" cols="50" rows="6" value="<?php echo $nachricht ?>"></textarea>
           </label>
           <br><br>
           <!--Absenden-->
@@ -143,9 +139,17 @@ header('Content-Type: text/html; charset=utf-8');
     </div>
     <div class="bestellung">
       <?php
-      if ($nameErr === '' && $vornameErr === '' && $emailErr === '' && isset($_POST['senden'])) {
-        echo "<style>.versendet { display:block; }</style>"; //Versendet anzeigen
-        mail('nick.camenisch@student.ksh.ch', 'Kontakt', $nachricht, "From: $email", "-f$email");
+      if ($nameErr === '' && $vornameErr === '' && $emailErr === '' && $nachrichtErr === '' && isset($_POST['senden']) && !empty($_POST['name']) && !empty($_POST['vorname']) && !empty($_POST['email']) && !empty($_POST['nachricht'])) {
+          echo "<style>.versendet { display:block; }</style>"; //Versendet anzeigen
+          mail('nick.c@menisch.ch', 'Kontakt', $ausgabe, "From: $email");
+          $name = "";
+          $vorname = "";
+          $nachricht = "";
+          $email = "";
+          $name = $_POST['name'];
+          $vorname = $_POST['vorname'];
+          $email = $_POST['email'];
+          $nachricht = $_POST['nachricht'];
       }
       ?>
     </div>
